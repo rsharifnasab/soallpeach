@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 
-int last = 1;
-int was_prime = 0;
+int last = 2;
+int was_prime = 1;
 int final;
 int c;
 
@@ -10,8 +10,7 @@ static int is_prime(int inp){
     //    return 1;       
 	if(inp == last) goto ret;
 	final = (int) sqrt(inp)+2;
-
-	for(c=2; c < final; c+=2){
+	for(c=3; c < final; c+=2){
 		if(inp %c == 0) goto not_prime;
 	}
 	
