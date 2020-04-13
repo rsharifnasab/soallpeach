@@ -1,6 +1,7 @@
-FROM openjdk:8
+FROM gcc:4.9
 RUN mkdir -p /opt/program
 WORKDIR /opt/program
-COPY PrimeChecker.java /opt/program/
-RUN javac PrimeChecker.java
-ENTRYPOINT ["java","PrimeChecker"]
+COPY a.c /opt/program/
+RUN gcc a.c -O3 -Wall -ffast-math
+ENTRYPOINT ["./a.out"]
+
