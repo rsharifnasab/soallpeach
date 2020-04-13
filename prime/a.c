@@ -54,7 +54,7 @@ static void read_ints (const char* file_name)
 
   fscanf (file, "%d", &i);    
   while (!feof (file))
-    {  
+    {  //	printf("i is : %d : ", i); 
 	printf("%d\n", is_prime(i));
 	
 	    
@@ -64,7 +64,6 @@ static void read_ints (const char* file_name)
 }
 
 int main(int argc, char *argv[]){
- 	printf("argv[1] : %s\n",argv[1]);
 	read_ints(argv[1]);	
 
 	return 0;
