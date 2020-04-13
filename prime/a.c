@@ -7,23 +7,25 @@ int final;
 int c;
 
 static int is_prime(int inp){
-    //    return 1;       
-	if(inp == last) goto ret;
-	final = (int) sqrt(inp)+2;
-	for(c=3; c < final; c+=2){
-		if(inp %c == 0) goto not_prime;
-	}
-	
-	was_prime = 1;
-	goto ret;
+    if (inp<3){
+        return inp == 2;
+    }
+    if(inp == last) goto ret;
+    final = (int) sqrt(inp)+2;
+    for(c=3; c < final; c+=2){
+        if(inp %c == 0) goto not_prime;
+    }
+
+    was_prime = 1;
+    goto ret;
 
 
 not_prime:
-	was_prime = 0;
+    was_prime = 0;
 
 ret:	
-	last = inp;
-	return was_prime;
+    last = inp;
+    return was_prime;
 }
 
 int main(int argc, char *argv[]){
