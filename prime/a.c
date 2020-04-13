@@ -52,13 +52,10 @@ static void read_ints (const char* file_name)
   FILE* file = fopen (file_name, "r");
   int i = 0;
 
-  fscanf (file, "%d", &i);    
   while (!feof (file))
     {  //	printf("i is : %d : ", i); 
-	printf("%d\n", is_prime(i));
-	
-	    
         fscanf (file, "%d", &i);      
+	printf("%d\n", is_prime(i));
     }
   fclose (file);        
 }

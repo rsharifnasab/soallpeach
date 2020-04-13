@@ -1,3 +1,5 @@
 *.class
 *.out
-input.txt
+*.exe
+myout
+
