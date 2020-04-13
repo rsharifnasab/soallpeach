@@ -7,7 +7,7 @@ int final;
 int c;
 
 static int is_prime(int inp){
-        return 1;       
+    //    return 1;       
 	if(inp == last) goto ret;
 	final = (int) sqrt(inp)+2;
 
